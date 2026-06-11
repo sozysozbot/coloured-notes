@@ -14,7 +14,7 @@ MuseScore {
       id: mainWindow
       
       function coloranote(nomesistema, explain) {
-            labelResult.text =  "Click a note after selecting the radio button to colour all the notes in " + explain + "'s system.";
+            labelResult.text =  "Click a note after selecting the radio button to colour all the notes " + explain + ".";
             var NoteNere = ["#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000"]
             var Newton =    ["#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31"]
             var Castel =    ["#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656"]
@@ -116,7 +116,7 @@ MuseScore {
             anchors.leftMargin: 10        	
             anchors.topMargin: 10
             onClicked: {
-                  coloranote("Newton", "SoundQuestTDS1")
+                  coloranote("Newton", "following SoundQuest's color palette. [C, Eb, F#, A] are marked as tonic notes")
                   }
             }
         
@@ -126,7 +126,7 @@ MuseScore {
             anchors.left: tds1.left        	
             anchors.top: tds1.bottom
             onClicked: {
-                  coloranote("Castel", "Castel")
+                  coloranote("Castel", "following SoundQuest's color palette. [D, F, Ab, B] are marked as tonic notes")
                   }
             }
                   
@@ -136,7 +136,7 @@ MuseScore {
             anchors.left: tds2.left        	
             anchors.top: tds2.bottom
             onClicked: {
-                  coloranote("Field", "Field")
+                  coloranote("Field", "following SoundQuest's color palette. [E, G, Bb, C#] are marked as tonic notes")
                   }
             }
             
@@ -146,7 +146,7 @@ MuseScore {
             anchors.left: tds3.left        	
             anchors.top: tds3.bottom
             onClicked: {
-                  coloranote("Jameson", "Jameson")
+                  coloranote("Jameson", "following SoundQuest's accessible color palette. [C, Eb, F#, A] are marked as tonic notes")
                   }
             }
       
@@ -156,7 +156,7 @@ MuseScore {
             anchors.left: tdsacc1.left        	
             anchors.top: tdsacc1.bottom
             onClicked: {
-                  coloranote("Helmholtz", "Helmholtz")
+                  coloranote("Helmholtz", "following SoundQuest's accessible color palette. [D, F, Ab, B] are marked as tonic notes")
                   }
             }
             
@@ -166,7 +166,7 @@ MuseScore {
             anchors.left: tdsacc2.left        	
             anchors.top: tdsacc2.bottom
             onClicked: {
-                  coloranote("Bishop", "Bishop")
+                  coloranote("Bishop", "following SoundQuest's accessible color palette. [E, G, Bb, C#] are marked as tonic notes")
                   }
             }
       
@@ -179,7 +179,7 @@ MuseScore {
             anchors.topMargin: 10
                         
             onClicked: {
-                 coloranote("default", "default")
+                 coloranote("default", "in the default color")
 	          } 
             }      
                  
@@ -193,6 +193,6 @@ MuseScore {
             }
 
       onRun: {
-            coloranote("default", "default")
+            coloranote("default", "in the default color")
             }
       }

@@ -109,7 +109,7 @@ MuseScore {
             }
                             
       RadioButton {
-            id: newton
+            id: tds1
             text: "SoundQuestTDS1"
             anchors.left: mainWindow.left        	
             anchors.top: mainWindow.top        	
@@ -121,50 +121,50 @@ MuseScore {
             }
         
       RadioButton {
-            id: castel
+            id: tds2
             text: "SoundQuestTDS2"
-            anchors.left: newton.left        	
-            anchors.top: newton.bottom
+            anchors.left: tds1.left        	
+            anchors.top: tds1.bottom
             onClicked: {
                   coloranote("Castel")
                   }
             }
                   
       RadioButton {
-            id: field
+            id: tds3
             text: "SoundQuestTDS3"
-            anchors.left: castel.left        	
-            anchors.top: castel.bottom
+            anchors.left: tds2.left        	
+            anchors.top: tds2.bottom
             onClicked: {
                   coloranote("Field")
                   }
             }
             
       RadioButton {
-            id: jameson
+            id: tdsacc1
             text: "AccessibleTDS1"
-            anchors.left: field.left        	
-            anchors.top: field.bottom
+            anchors.left: tds3.left        	
+            anchors.top: tds3.bottom
             onClicked: {
                   coloranote("Jameson")
                   }
             }
       
       RadioButton {
-            id: helmholtz
+            id: tdsacc2
             text: "AccessibleTDS2"
-            anchors.left: jameson.left        	
-            anchors.top: jameson.bottom
+            anchors.left: tdsacc1.left        	
+            anchors.top: tdsacc1.bottom
             onClicked: {
                   coloranote("Helmholtz")
                   }
             }
             
       RadioButton {
-            id: bishop
+            id: tdsacc3
             text: "AccessibleTDS3"
-            anchors.left: helmholtz.left        	
-            anchors.top: helmholtz.bottom
+            anchors.left: tdsacc2.left        	
+            anchors.top: tdsacc2.bottom
             onClicked: {
                   coloranote("Bishop")
                   }
@@ -174,8 +174,8 @@ MuseScore {
             id: buttonRestore
             text: "Reset"
 
-            anchors.left: bishop.left        	
-            anchors.top: bishop.bottom 
+            anchors.left: tdsacc3.left        	
+            anchors.top: tdsacc3.bottom 
             anchors.topMargin: 10
                         
             onClicked: {

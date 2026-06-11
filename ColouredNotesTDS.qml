@@ -107,14 +107,24 @@ MuseScore {
                         while (cursor.next() && cursor.tick < endTick)
                         }
             }
-                            
+
       RadioButton {
-            id: tds1
-            text: "SoundQuestTDS1"
+            id: nocolor
+            text: "No Color"
             anchors.left: mainWindow.left        	
             anchors.top: mainWindow.top        	
             anchors.leftMargin: 10        	
             anchors.topMargin: 10
+            onClicked: {
+                  coloranote("default", "in the default color")
+                  }
+            }
+                            
+      RadioButton {
+            id: tds1
+            text: "SoundQuestTDS1"
+            anchors.left: nocolor.left        	
+            anchors.top: nocolor.bottom    
             onClicked: {
                   coloranote("Newton", "following SoundQuest's color palette. [C, Eb, F#, A] are marked as tonic notes")
                   }
@@ -168,26 +178,13 @@ MuseScore {
             onClicked: {
                   coloranote("Bishop", "following SoundQuest's accessible color palette. [E, G, Bb, C#] are marked as tonic notes")
                   }
-            }
-      
-      Button {
-            id: buttonRestore
-            text: "Reset"
-
-            anchors.left: tdsacc3.left        	
-            anchors.top: tdsacc3.bottom 
-            anchors.topMargin: 10
-                        
-            onClicked: {
-                 coloranote("default", "in the default color")
-	          } 
-            }      
+            }   
                  
       Label {
             id: labelResult	
             width: mainWindow.width - 20
-            anchors.left: buttonRestore.left        	
-            anchors.top: buttonRestore.bottom       	
+            anchors.left: tdsacc3.left        	
+            anchors.top: tdsacc3.bottom       	
             anchors.topMargin: 10
             wrapMode: Text.WordWrap 
             }

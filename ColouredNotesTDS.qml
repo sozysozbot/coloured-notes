@@ -4,7 +4,7 @@ import MuseScore 3.0
 
 MuseScore {
       
-      menuPath: "ColouredNotes"
+      menuPath: "ColouredNotesTDS"
       description: "This Plugin colours the notes in a composition based on the chosen system."
       pluginType: "dialog"
       version: "1.0"
@@ -16,19 +16,12 @@ MuseScore {
       function coloranote(nomesistema) {
             labelResult.text =  "Notes coloured following " + nomesistema + "'s system.";
             var NoteNere = ["#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000"]
-            var Newton = ["#d82a2f", "#000000", "#e78c36", "#000000", "#fff32b", "#bcd85f", "#000000", "#009c95", "#000000", "#5e50a1", "#000000", "#cf3e96"]
-            var Castel = ["#2b337f", "#009991", "#019e47", "#649851", "#f7e95e", "#f1cc5f", "#e78c36", "#d82a2f", "#992c2b", "#c42c82", "#5a337c", "#812d7d"]
-            var Field = ["#2b337f", "#000000", "#812d7d", "#000000", "#d82a2f", "#e78c36", "#000000", "#f7e95e", "#000000", "#839841", "#000000", "#019e47"]
-            var Jameson = ["#d82a2f", "#db6234", "#e78c36", "#f1cc5f", "#f7e95e", "#019e47", "#009991", "#2b337f", "#55307a", "#812d7d", "#a23484", "#c42c82"]
-            var Helmholtz = ["#f7e95e", "#019e47", "#00968f", "#01769b", "#812d7d", "#c42c82", "#942953", "#d82d2e", "#be462c", "#be5031", "#da4e30", "#e58836"]
-            var Bishop = ["#d82a2f", "#992c2b", "#e78c36", "#f3ca33", "#f7e95e", "#c0d75d", "#019e47", "#00a893", "#812d7d", "#c42c82", "#c5375e", "#d82a2f"]
-            var Seemann = ["#702021", "#d82d2e", "#e78c36", "#f1cc5f", "#f7e95e", "#019e47", "#009991", "#2b337f", "#812d7d", "#c42c82", "#65433f", "#141313"]
-            var Rimington = ["#d82a2f", "#992c2b", "#db6234", "#e78c36", "#f7e95e", "#839841", "#019e47", "#00a893", "#009991", "#812d7d", "#2b337f", "#c42c82"]
-            var Scriabin = ["#d82a2f", "#c42c82", "#f7e95e", "#646989", "#006aa8", "#992c2b", "#2b337f", "#e78c36", "#812d7d", "#019e47", "#646989", "#006aa8"]
-            var Klein = ["#b12b2c", "#d82a2f", "#db6234", "#e78c36", "#f7e95e", "#c0d75d", "#019e47", "#009991", "#2b337f", "#7d3984", "#c42c82", "#982c66"]
-            var Aeppli = ["#d82a2f", "#000000", "#812d7d", "#000000", "#f7e95e", "#000000", "#019e47", "#009991", "#000000", "#016aa8", "#5a337c", "#812d7d"]
-            var Belmont = ["#d82a2f", "#db6234", "#e78c36", "#f3ca33", "#f7e95e", "#c0d75d", "#019e47", "#009991", "#2b337f", "#993685", "#c42c82", "#a12d57"]
-            var Zieverink = ["#c0d75d", "#019e47", "#009991", "#2b337f", "#812d7d", "#c42c82", "#6e254c", "#8f3128", "#d82a2f", "#e78c36", "#efe89c", "#f7e95e"]
+            var Newton =    ["#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31"]
+            var Castel =    ["#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656"]
+            var Field =     ["#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031"]
+            var Jameson =   ["#4096FF", "#5701E1", "#F1AB31", "#4096FF", "#5701E1", "#F1AB31", "#4096FF", "#5701E1", "#F1AB31", "#4096FF", "#5701E1", "#F1AB31"]
+            var Helmholtz = ["#5701E1", "#F1AB31", "#4096FF", "#5701E1", "#F1AB31", "#4096FF", "#5701E1", "#F1AB31", "#4096FF", "#5701E1", "#F1AB31", "#4096FF"]
+            var Bishop =    ["#F1AB31", "#4096FF", "#5701E1", "#F1AB31", "#4096FF", "#5701E1", "#F1AB31", "#4096FF", "#5701E1", "#F1AB31", "#4096FF", "#5701E1"]
             var startStaff = 0
             var endStaff = curScore.nstaves - 1
             var startTick = 0
@@ -106,48 +99,6 @@ MuseScore {
                                           cursor.element.notes[i].color = Bishop[cursor.element.notes[i].pitch % 12]
                                           if (cursor.element.notes[i].accidental) {
                                                 cursor.element.notes[i].accidental.color = Bishop[cursor.element.notes[i].pitch % 12]
-                                          }  
-                                                 break ;
-                                    case "Seemann":
-                                          cursor.element.notes[i].color = Seemann[cursor.element.notes[i].pitch % 12]
-                                          if (cursor.element.notes[i].accidental) {
-                                                cursor.element.notes[i].accidental.color = Seemann[cursor.element.notes[i].pitch % 12]
-                                          }
-                                                 break ;
-                                    case "Rimington":
-                                          cursor.element.notes[i].color = Rimington[cursor.element.notes[i].pitch % 12]
-                                          if (cursor.element.notes[i].accidental) {
-                                                cursor.element.notes[i].accidental.color = Rimington[cursor.element.notes[i].pitch % 12]
-                                          } 
-                                                 break ;
-                                    case "Scriabin":
-                                          cursor.element.notes[i].color = Scriabin[cursor.element.notes[i].pitch % 12]  
-                                          if (cursor.element.notes[i].accidental) {
-                                                cursor.element.notes[i].accidental.color = Scriabin[cursor.element.notes[i].pitch % 12]
-                                          }
-                                                 break ;
-                                    case "Klein":
-                                          cursor.element.notes[i].color = Klein[cursor.element.notes[i].pitch % 12]  
-                                          if (cursor.element.notes[i].accidental) {
-                                                cursor.element.notes[i].accidental.color = Klein[cursor.element.notes[i].pitch % 12]
-                                          }
-                                                 break ;
-                                    case "Aeppli":
-                                          cursor.element.notes[i].color = Aeppli[cursor.element.notes[i].pitch % 12]  
-                                          if (cursor.element.notes[i].accidental) {
-                                                cursor.element.notes[i].accidental.color = Aeppli[cursor.element.notes[i].pitch % 12]
-                                          }
-                                                 break ;
-                                    case "Belmont":
-                                          cursor.element.notes[i].color = Belmont[cursor.element.notes[i].pitch % 12]  
-                                          if (cursor.element.notes[i].accidental) {
-                                                cursor.element.notes[i].accidental.color = Belmont[cursor.element.notes[i].pitch % 12]
-                                          }
-                                                 break ;
-                                    case "Zieverink":
-                                          cursor.element.notes[i].color = Zieverink[cursor.element.notes[i].pitch % 12] 
-                                          if (cursor.element.notes[i].accidental) {
-                                                cursor.element.notes[i].accidental.color = Zieverink[cursor.element.notes[i].pitch % 12]
                                           } 
                                                  break ;                                                                                                                     
                                                  }                            
@@ -159,7 +110,7 @@ MuseScore {
                             
       RadioButton {
             id: newton
-            text: "Newton"
+            text: "SoundQuestTDS1"
             anchors.left: mainWindow.left        	
             anchors.top: mainWindow.top        	
             anchors.leftMargin: 10        	
@@ -171,7 +122,7 @@ MuseScore {
         
       RadioButton {
             id: castel
-            text: "Castel"
+            text: "SoundQuestTDS2"
             anchors.left: newton.left        	
             anchors.top: newton.bottom
             onClicked: {
@@ -181,7 +132,7 @@ MuseScore {
                   
       RadioButton {
             id: field
-            text: "Field"
+            text: "SoundQuestTDS3"
             anchors.left: castel.left        	
             anchors.top: castel.bottom
             onClicked: {
@@ -191,7 +142,7 @@ MuseScore {
             
       RadioButton {
             id: jameson
-            text: "Jameson"
+            text: "AccessibleTDS1"
             anchors.left: field.left        	
             anchors.top: field.bottom
             onClicked: {
@@ -201,7 +152,7 @@ MuseScore {
       
       RadioButton {
             id: helmholtz
-            text: "Helmholtz"
+            text: "AccessibleTDS2"
             anchors.left: jameson.left        	
             anchors.top: jameson.bottom
             onClicked: {
@@ -211,7 +162,7 @@ MuseScore {
             
       RadioButton {
             id: bishop
-            text: "Bishop"
+            text: "AccessibleTDS3"
             anchors.left: helmholtz.left        	
             anchors.top: helmholtz.bottom
             onClicked: {
@@ -219,82 +170,12 @@ MuseScore {
                   }
             }
       
-      RadioButton {
-            id: seemann
-            text: "Seemann"
-            anchors.left: bishop.left        	
-            anchors.top: bishop.bottom
-            onClicked: {
-                  coloranote("Seemann")
-                  }
-            }
-       
-      RadioButton {
-            id: rimington
-            text: "Rimington"
-            anchors.left: seemann.left        	
-            anchors.top: seemann.bottom
-            onClicked: {
-                  coloranote("Rimington")
-                  }
-            }
-      
-      RadioButton {
-            id: scriabin
-            text: "Scriabin"
-            anchors.left: rimington.left        	
-            anchors.top: rimington.bottom
-            onClicked: {
-                  coloranote("Scriabin")
-                  }
-            }
-      
-      RadioButton {
-            id: klein
-            text: "Klein"
-            anchors.left: scriabin.left        	
-            anchors.top: scriabin.bottom
-            onClicked: {
-                  coloranote("Klein")
-                  }
-            }
-      
-      RadioButton {
-            id: aeppli
-            text: "Aeppli"
-            anchors.left: klein.left        	
-            anchors.top: klein.bottom
-            onClicked: {
-                  coloranote("Aeppli")
-                  }
-            }
-            
-       RadioButton {
-            id: belmont
-            text: "Belmont"
-            anchors.left: aeppli.left        	
-            anchors.top: aeppli.bottom
-            onClicked: {
-                  coloranote("Belmont")
-                  }
-            }
-      
-      RadioButton {
-            id: zieverink
-            text: "Zieverink"
-            anchors.left: belmont.left        	
-            anchors.top: belmont.bottom
-            onClicked: {
-                  coloranote("Zieverink")
-                  }
-            }
-                          
       Button {
             id: buttonRestore
             text: "Reset"
 
-            anchors.left: zieverink.left        	
-            anchors.top: zieverink.bottom 
+            anchors.left: bishop.left        	
+            anchors.top: bishop.bottom 
             anchors.topMargin: 10
                         
             onClicked: {

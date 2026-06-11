@@ -13,8 +13,8 @@ MuseScore {
       height: 630
       id: mainWindow
       
-      function coloranote(nomesistema) {
-            labelResult.text =  "Click a note after selecting the radio button to colour all the notes in " + nomesistema + nomesistema + nomesistema + nomesistema + nomesistema + nomesistema + "'s system.";
+      function coloranote(nomesistema, explain) {
+            labelResult.text =  "Click a note after selecting the radio button to colour all the notes in " + explain + "'s system.";
             var NoteNere = ["#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000"]
             var Newton =    ["#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31"]
             var Castel =    ["#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656"]
@@ -116,7 +116,7 @@ MuseScore {
             anchors.leftMargin: 10        	
             anchors.topMargin: 10
             onClicked: {
-                  coloranote("Newton")
+                  coloranote("Newton", "SoundQuestTDS1")
                   }
             }
         
@@ -126,7 +126,7 @@ MuseScore {
             anchors.left: tds1.left        	
             anchors.top: tds1.bottom
             onClicked: {
-                  coloranote("Castel")
+                  coloranote("Castel", "Castel")
                   }
             }
                   
@@ -136,7 +136,7 @@ MuseScore {
             anchors.left: tds2.left        	
             anchors.top: tds2.bottom
             onClicked: {
-                  coloranote("Field")
+                  coloranote("Field", "Field")
                   }
             }
             
@@ -146,7 +146,7 @@ MuseScore {
             anchors.left: tds3.left        	
             anchors.top: tds3.bottom
             onClicked: {
-                  coloranote("Jameson")
+                  coloranote("Jameson", "Jameson")
                   }
             }
       
@@ -156,7 +156,7 @@ MuseScore {
             anchors.left: tdsacc1.left        	
             anchors.top: tdsacc1.bottom
             onClicked: {
-                  coloranote("Helmholtz")
+                  coloranote("Helmholtz", "Helmholtz")
                   }
             }
             
@@ -166,7 +166,7 @@ MuseScore {
             anchors.left: tdsacc2.left        	
             anchors.top: tdsacc2.bottom
             onClicked: {
-                  coloranote("Bishop")
+                  coloranote("Bishop", "Bishop")
                   }
             }
       
@@ -179,23 +179,9 @@ MuseScore {
             anchors.topMargin: 10
                         
             onClicked: {
-                 coloranote("default")
+                 coloranote("default", "default")
 	          } 
             }      
-                
-      Button {
-            id: exit
-            text: "Exit"
-            
-            anchors.right: mainWindow.right        	
-            anchors.bottom: mainWindow.bottom 
-            anchors.bottomMargin: 50
-            anchors.rightMargin: 10
-                        
-            onClicked: {
-                 Qt.quit()
-	          } 
-            }  
                  
       Label {
             id: labelResult	
@@ -207,6 +193,6 @@ MuseScore {
             }
 
       onRun: {
-            coloranote("default")
+            coloranote("default", "default")
             }
       }

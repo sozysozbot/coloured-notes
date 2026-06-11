@@ -14,7 +14,7 @@ MuseScore {
       id: mainWindow
       
       function coloranote(nomesistema) {
-            labelResult.text =  "Notes coloured following " + nomesistema + "'s system.";
+            labelResult.text =  "Click a note after selecting the radio button to colour all the notes in " + nomesistema + "'s system.";
             var NoteNere = ["#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000"]
             var Newton =    ["#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31"]
             var Castel =    ["#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656", "#F15031", "#F1AB31", "#49B656"]
